@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="./css/per-page/cv.css">
     <link rel="icon" href="./media/favicon.ico" type="image/ico" sizes="16x16">
     <title>CV</title>
+
+    <link rel="stylesheet" href="./vendor/OwlCarousel/docs/assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./vendor/OwlCarousel/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
+    <script src="./vendor/OwlCarousel/docs/assets/vendors/jquery.min.js"></script>
+    <script src="./vendor/OwlCarousel/docs/assets/owlcarousel/owl.carousel.js"></script>
+
 </head>
 <body>
     <nav class="navbar navbar-expand-lg " style="background-color: #146663; color: #212B31;">
@@ -41,7 +47,7 @@
         <div class="col-lg-2">
           <img src="./media/img/zelf.jpg" alt="Foto Jens Brees" title="Jens Brees" height="200px"  style="padding: 10px;">
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-4" style="height: 300px;">
 
           <div class="bd-example m-0 border-0">
             <nav>
@@ -69,10 +75,59 @@
           <div class="flex-div-column">
             <h2 class="center">Onderwijs:</h2><br>
             <img src="./media/img/tijdlijn.png" alt="2016 tot 2022, wetenschappen wiskunde in Provil-ION. 2022 tot 2023, fysica in KU Leuven. 2023 tot nu, Programmeren in Thomas More." Titel="Tijdlijn Schoolervaring">
+            <a href="./media/cv.pdf" target="_blank" class="cv-link"><img src="./media/img/cv.JPG" alt="CV" title="CV" class="cv"></a>
+            <p style="text-align: center;">Klik hier voor PDF</p>
           </div>
         </div>
       </div>
     </div>
+
+      <div class="large-12 columns">
+        <div>
+          <h2 style="text-align: center;">Programeer Talen:</h2><br>
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <img src="./media/img/python.png" alt="Python" title="Python" class="taal" style="width: 137px !important;">
+            </div>
+            <div class="item">
+              <img src="./media/img/c-sharp.png" alt="C#" title="C#" class="taal" style="width: 150px !important;">
+            </div>
+            <div class="item">
+              <img src="./media/img/sql.png" alt="SQL" title="SQL" class="taal" style="width: 132px !important;">
+            </div>
+            <div class="item">
+              <img src="./media/img/html.png" alt="HTML" title="HTML" class="taal" style="width: 150px !important;">
+            </div>
+            <div class="item">
+              <img src="./media/img/css.png" alt="CSS" title="CSS" class="taal" style="width: 107px !important;">
+            </div>
+            <div class="item">
+              <img src="./media/img/bootstrap.png" alt="Bootstrap" title="Bootstrap" class="taal" style="width: 150px !important;">
+            </div>
+        </div>
+    
+        <script>
+          $(document).ready(function() {
+            var owl = $('.owl-carousel');
+            owl.owlCarousel({
+              margin: 10,
+              nav: true,
+              loop: true,
+              responsive: {
+                0: {
+                  items: 1
+                },
+                600: {
+                  items: 3
+                },
+                1000: {
+                  items: 5
+                }
+              }
+            })
+          })
+        </script>
+      </div>
 
     <div class="container">
         <footer class="py-3 my-4">
